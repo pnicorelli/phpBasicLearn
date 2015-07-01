@@ -1,19 +1,14 @@
 <?php
-//show all errors
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+include_once("init.php");
 
-//fix some LAMP distributions error
-session_start();
 
-//dump every vars in the SESSION
-echo "SESSION: ";
-echo "<code>";
-var_dump($_SESSION);
-echo "</code>";
+$users = include_once("./data/users.php");
 
-//dump every vars in REQUEST (GET/POST)
-echo "<br><br>REQUEST: ";
-echo "<code>";
-var_dump($_REQUEST);
-echo "</code>";
+/*
+ *  if user credential exist on $users then
+ *  		- create SESSION vars for the auth
+ *  		- redirect on dashboard.php
+ *    else
+ *    		- redirect on login form with error
+ *
+ */

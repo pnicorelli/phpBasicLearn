@@ -1,3 +1,10 @@
+<?php
+include_once("init.php");
+
+/*
+ * if there is an active session redirect on dashboard.php
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +13,11 @@
 </head>
 
 <body>
+    <?php
+    /*
+     * if there erros occoured on login show the error (eg. "user not found"/"password empty"...)
+     */
+    ?>
     <div id="loginBox">
         <form id="loginForm" method="POST" action="login.php">
             <div class="loginRow">
@@ -15,7 +27,7 @@
                 <input type="password" name="password" id="password" value="" placeholder="password">
             </div>
             <div class="loginRow">
-                <button>Sing In</button>
+                <button>Sign In</button>
             </div>
         </form>
     </div>
