@@ -15,7 +15,7 @@
                 <input type="password" name="password" id="password" value="" placeholder="password">
             </div>
             <div class="loginRow">
-                <button>Sing In</button>
+                <button>Sign In</button>
             </div>
         </form>
     </div>
